@@ -60,6 +60,27 @@ p{color:var(--ink-soft); margin:0 0 16px;}
 table{width:100%; border-collapse:collapse; margin:0 0 20px; font-size:0.88rem;}
 th,td{text-align:left; padding:8px 10px; border-bottom:1px solid var(--line);}
 th{font-family:'IBM Plex Mono',monospace; font-size:0.72rem; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-soft);}
+
+.product-thumb img, .pick-swatch img{
+position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center;
+}
+.product-thumb .wm, .pick-swatch .wm{
+position:absolute; right:8px; bottom:7px; z-index:2;
+font-family:'IBM Plex Mono',monospace; font-size:0.6rem; font-weight:500; letter-spacing:0.03em;
+color:#fff; background:rgba(20,15,10,0.55); backdrop-filter:blur(2px);
+padding:3px 7px; border-radius:5px; pointer-events:none; white-space:nowrap;
+}
+.pick-swatch .wm{ font-size:0.65rem; right:12px; bottom:10px; }
+.product-thumb::before, .pick-swatch::before{
+content:""; position:absolute; inset:0;
+background:linear-gradient(180deg, transparent 55%, rgba(0,0,0,0.35) 100%);
+z-index:1; pointer-events:none;
+}
+
+.pick-thumb{ position:relative; width:100%; aspect-ratio:4/3; border-radius:8px; overflow:hidden; margin-bottom:12px; background:var(--surface-2,#f1eade); }
+.pick-thumb img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.pick-thumb::before{ content:""; position:absolute; inset:0; background:linear-gradient(180deg, transparent 55%, rgba(0,0,0,0.35) 100%); }
+.pick-thumb .wm{ position:absolute; right:8px; bottom:7px; z-index:2; font-family:'IBM Plex Mono',monospace; font-size:0.6rem; font-weight:500; letter-spacing:0.03em; color:#fff; background:rgba(20,15,10,0.55); padding:3px 7px; border-radius:5px; white-space:nowrap; }
 </style>
 
 </head>
@@ -72,7 +93,7 @@ th{font-family:'IBM Plex Mono',monospace; font-size:0.72rem; text-transform:uppe
 <p class="dek">Down to the final week? These fast-shipping picks are backed by reliable Prime delivery windows.</p>
 
 <p>Down to the final week of holiday shopping? You can still give a thoughtful, high-quality gift without settling for generic store leftovers. These picks are backed by fast Prime delivery options.</p>
-<div class="pick"><h3>Personalized Photo Ornament</h3><p>A fast-shipping stocking-stuffer or tree-topper gift that still feels personal, not last-minute.</p><div class="pick-foot"><span class="price">~$22</span><a class="shop" href="https://www.amazon.com/dp/B08L6S37G7?tag=thedealnest00-20">Shop it</a></div></div><div class="pick"><h3>Prime-Eligible Plush Robe</h3><p>Soft, luxurious, and available in multiple sizes with reliable 2-day Prime delivery right up to the holiday cutoff.</p><div class="pick-foot"><span class="price">~$42</span><a class="shop" href="https://www.amazon.com/dp/B07XVRBC3B?tag=thedealnest00-20">Shop it</a></div></div><div class="pick"><h3>Galaxy Star Projector Night Light</h3><p>A crowd-pleasing bedroom-aesthetic pick that ships quickly for last-minute gift exchanges.</p><div class="pick-foot"><span class="price">~$33</span><a class="shop" href="https://www.amazon.com/dp/B09FL6YR9L?tag=thedealnest00-20">Shop it</a></div></div><p>Check the <a href="blog-shipping-deadline-cheat-sheet.html">Shipping Deadline Cheat Sheet</a> before you order any of these — Prime windows shift in the final days before Christmas.</p>
+<div class="pick"><div class="pick-thumb"><img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T2/images/I/918wpByr0eL._AC_SY300_SX300_QL70_FMwebp_.jpg" alt="Personalized Photo Ornament" loading="lazy"><span class="wm">The Deal Nest</span></div><h3>Personalized Photo Ornament</h3><p>A fast-shipping stocking-stuffer or tree-topper gift that still feels personal, not last-minute.</p><div class="pick-foot"><span class="price">~$22</span><a class="shop" href="https://www.amazon.com/dp/B08L6S37G7?tag=thedealnest00-20">Shop it</a></div></div><div class="pick"><div class="pick-thumb"><img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T2/images/I/61UB6r-PJAL._AC_SY879_.jpg" alt="Prime-Eligible Plush Robe" loading="lazy"><span class="wm">The Deal Nest</span></div><h3>Prime-Eligible Plush Robe</h3><p>Soft, luxurious, and available in multiple sizes with reliable 2-day Prime delivery right up to the holiday cutoff.</p><div class="pick-foot"><span class="price">~$42</span><a class="shop" href="https://www.amazon.com/dp/B07XVRBC3B?tag=thedealnest00-20">Shop it</a></div></div><div class="pick"><div class="pick-thumb"><img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T2/images/I/61f9wySJCmL._AC_SY300_SX300_QL70_FMwebp_.jpg" alt="Galaxy Star Projector Night Light" loading="lazy"><span class="wm">The Deal Nest</span></div><h3>Galaxy Star Projector Night Light</h3><p>A crowd-pleasing bedroom-aesthetic pick that ships quickly for last-minute gift exchanges.</p><div class="pick-foot"><span class="price">~$33</span><a class="shop" href="https://www.amazon.com/dp/B09FL6YR9L?tag=thedealnest00-20">Shop it</a></div></div><p>Check the <a href="blog-shipping-deadline-cheat-sheet.html">Shipping Deadline Cheat Sheet</a> before you order any of these — Prime windows shift in the final days before Christmas.</p>
 <div class="tags"><span class="tag">fast-ship</span><span class="tag">gift guide</span><span class="tag">last-minute</span></div>
 <div class="legal-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="affiliate-disclosure.html">Affiliate Disclosure</a><a href="privacy-policy.html">Privacy Policy</a></div>
 </div>

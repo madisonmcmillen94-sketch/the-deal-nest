@@ -60,6 +60,27 @@ p{color:var(--ink-soft); margin:0 0 16px;}
 table{width:100%; border-collapse:collapse; margin:0 0 20px; font-size:0.88rem;}
 th,td{text-align:left; padding:8px 10px; border-bottom:1px solid var(--line);}
 th{font-family:'IBM Plex Mono',monospace; font-size:0.72rem; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-soft);}
+
+.product-thumb img, .pick-swatch img{
+position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center;
+}
+.product-thumb .wm, .pick-swatch .wm{
+position:absolute; right:8px; bottom:7px; z-index:2;
+font-family:'IBM Plex Mono',monospace; font-size:0.6rem; font-weight:500; letter-spacing:0.03em;
+color:#fff; background:rgba(20,15,10,0.55); backdrop-filter:blur(2px);
+padding:3px 7px; border-radius:5px; pointer-events:none; white-space:nowrap;
+}
+.pick-swatch .wm{ font-size:0.65rem; right:12px; bottom:10px; }
+.product-thumb::before, .pick-swatch::before{
+content:""; position:absolute; inset:0;
+background:linear-gradient(180deg, transparent 55%, rgba(0,0,0,0.35) 100%);
+z-index:1; pointer-events:none;
+}
+
+.pick-thumb{ position:relative; width:100%; aspect-ratio:4/3; border-radius:8px; overflow:hidden; margin-bottom:12px; background:var(--surface-2,#f1eade); }
+.pick-thumb img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.pick-thumb::before{ content:""; position:absolute; inset:0; background:linear-gradient(180deg, transparent 55%, rgba(0,0,0,0.35) 100%); }
+.pick-thumb .wm{ position:absolute; right:8px; bottom:7px; z-index:2; font-family:'IBM Plex Mono',monospace; font-size:0.6rem; font-weight:500; letter-spacing:0.03em; color:#fff; background:rgba(20,15,10,0.55); padding:3px 7px; border-radius:5px; white-space:nowrap; }
 </style>
 
 </head>
@@ -72,7 +93,7 @@ th{font-family:'IBM Plex Mono',monospace; font-size:0.72rem; text-transform:uppe
 <p class="dek">Spooky-season decor and fall hostess gifts that don't ask for a full decorating budget.</p>
 
 <p>Halloween and fall entertaining are right around the corner. You don't need to spend a fortune to make your space feel festive, warm, and ready for guests — whether you're decorating a porch, setting up a cozy movie night, or heading to a Halloween party, these picks all land under $20.</p>
-<div class="pick"><h3>Flameless LED Pillar Candles with Remote</h3><p>Enjoy the warm glow of candlelight without worrying about open flames around kids, pets, or costumes. Real-wax texture with a 10-key remote and timer settings, ideal for pumpkin displays or dinner tables.</p><div class="pick-foot"><span class="price">~$20</span><a class="shop" href="https://www.amazon.com/dp/B07D266SGW?tag=thedealnest00-20">Shop it</a></div></div><div class="pick"><h3>Pumpkin-Shaped Ceramic Mug</h3><p>The ultimate fall-aesthetic staple. Whether you're sipping cider, a pumpkin spice latte, or mulled wine, this charming mug brings instant seasonal cheer — or makes a thoughtful hostess gift.</p><div class="pick-foot"><span class="price">~$20</span><a class="shop" href="https://www.amazon.com/dp/B0D67BL5JB?tag=thedealnest00-20">Shop it</a></div></div><div class="pick"><h3>Lightweight Oversized Cardigan Cover-Up</h3><p>Heading out for trick-or-treating or an evening bonfire? This top-rated, lightweight layer goes over any outfit to stay cozy without overheating.</p><div class="pick-foot"><span class="price">~$18</span><a class="shop" href="https://www.amazon.com/dp/B0H1FBXLXN?tag=thedealnest00-20">Shop it</a></div></div><div class="pick"><h3>Galaxy Star Projector Night Light</h3><p>Brings a subtle, magical glow to bedrooms, hallways, or entryway tables — soft ambient light that doubles as fun seasonal decor through October.</p><div class="pick-foot"><span class="price">~$33</span><a class="shop" href="https://www.amazon.com/dp/B09FL6YR9L?tag=thedealnest00-20">Shop it</a></div></div><p>Any one of these works as a $15-$20 hostess gift on its own — no need to buy the whole set unless you're hosting.</p>
+<div class="pick"><div class="pick-thumb"><img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T2/images/I/619kPtJskWL._AC_SX342_SY445_QL70_FMwebp_.jpg" alt="Flameless LED Pillar Candles with Remote" loading="lazy"><span class="wm">The Deal Nest</span></div><h3>Flameless LED Pillar Candles with Remote</h3><p>Enjoy the warm glow of candlelight without worrying about open flames around kids, pets, or costumes. Real-wax texture with a 10-key remote and timer settings, ideal for pumpkin displays or dinner tables.</p><div class="pick-foot"><span class="price">~$20</span><a class="shop" href="https://www.amazon.com/dp/B07D266SGW?tag=thedealnest00-20">Shop it</a></div></div><div class="pick"><div class="pick-thumb"><img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T2/images/I/51UInBVEPUL._AC_SY300_SX300_QL70_FMwebp_.jpg" alt="Pumpkin-Shaped Ceramic Mug" loading="lazy"><span class="wm">The Deal Nest</span></div><h3>Pumpkin-Shaped Ceramic Mug</h3><p>The ultimate fall-aesthetic staple. Whether you're sipping cider, a pumpkin spice latte, or mulled wine, this charming mug brings instant seasonal cheer — or makes a thoughtful hostess gift.</p><div class="pick-foot"><span class="price">~$20</span><a class="shop" href="https://www.amazon.com/dp/B0D67BL5JB?tag=thedealnest00-20">Shop it</a></div></div><div class="pick"><div class="pick-thumb"><img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T2/images/I/61iHWxVOOzL._AC_SX679_.jpg" alt="Lightweight Oversized Cardigan Cover-Up" loading="lazy"><span class="wm">The Deal Nest</span></div><h3>Lightweight Oversized Cardigan Cover-Up</h3><p>Heading out for trick-or-treating or an evening bonfire? This top-rated, lightweight layer goes over any outfit to stay cozy without overheating.</p><div class="pick-foot"><span class="price">~$18</span><a class="shop" href="https://www.amazon.com/dp/B0H1FBXLXN?tag=thedealnest00-20">Shop it</a></div></div><div class="pick"><div class="pick-thumb"><img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T2/images/I/61f9wySJCmL._AC_SY300_SX300_QL70_FMwebp_.jpg" alt="Galaxy Star Projector Night Light" loading="lazy"><span class="wm">The Deal Nest</span></div><h3>Galaxy Star Projector Night Light</h3><p>Brings a subtle, magical glow to bedrooms, hallways, or entryway tables — soft ambient light that doubles as fun seasonal decor through October.</p><div class="pick-foot"><span class="price">~$33</span><a class="shop" href="https://www.amazon.com/dp/B09FL6YR9L?tag=thedealnest00-20">Shop it</a></div></div><p>Any one of these works as a $15-$20 hostess gift on its own — no need to buy the whole set unless you're hosting.</p>
 <div class="tags"><span class="tag">gifting</span><span class="tag">novelty</span><span class="tag">halloween</span></div>
 <div class="legal-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="affiliate-disclosure.html">Affiliate Disclosure</a><a href="privacy-policy.html">Privacy Policy</a></div>
 </div>

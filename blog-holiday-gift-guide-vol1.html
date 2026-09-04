@@ -60,6 +60,27 @@ p{color:var(--ink-soft); margin:0 0 16px;}
 table{width:100%; border-collapse:collapse; margin:0 0 20px; font-size:0.88rem;}
 th,td{text-align:left; padding:8px 10px; border-bottom:1px solid var(--line);}
 th{font-family:'IBM Plex Mono',monospace; font-size:0.72rem; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-soft);}
+
+.product-thumb img, .pick-swatch img{
+position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center;
+}
+.product-thumb .wm, .pick-swatch .wm{
+position:absolute; right:8px; bottom:7px; z-index:2;
+font-family:'IBM Plex Mono',monospace; font-size:0.6rem; font-weight:500; letter-spacing:0.03em;
+color:#fff; background:rgba(20,15,10,0.55); backdrop-filter:blur(2px);
+padding:3px 7px; border-radius:5px; pointer-events:none; white-space:nowrap;
+}
+.pick-swatch .wm{ font-size:0.65rem; right:12px; bottom:10px; }
+.product-thumb::before, .pick-swatch::before{
+content:""; position:absolute; inset:0;
+background:linear-gradient(180deg, transparent 55%, rgba(0,0,0,0.35) 100%);
+z-index:1; pointer-events:none;
+}
+
+.pick-thumb{ position:relative; width:100%; aspect-ratio:4/3; border-radius:8px; overflow:hidden; margin-bottom:12px; background:var(--surface-2,#f1eade); }
+.pick-thumb img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.pick-thumb::before{ content:""; position:absolute; inset:0; background:linear-gradient(180deg, transparent 55%, rgba(0,0,0,0.35) 100%); }
+.pick-thumb .wm{ position:absolute; right:8px; bottom:7px; z-index:2; font-family:'IBM Plex Mono',monospace; font-size:0.6rem; font-weight:500; letter-spacing:0.03em; color:#fff; background:rgba(20,15,10,0.55); padding:3px 7px; border-radius:5px; white-space:nowrap; }
 </style>
 
 </head>
@@ -72,7 +93,7 @@ th{font-family:'IBM Plex Mono',monospace; font-size:0.72rem; text-transform:uppe
 <p class="dek">Getting a head start on holiday shopping saves stress and helps you snag popular items before they sell out.</p>
 
 <p>Getting a head start on your holiday shopping list doesn't just save you stress — it helps you snag popular items before they sell out or run into shipping delays. Here are four crowd-pleasing gift ideas under $60 to kick off your list.</p>
-<div class="pick"><h3>Portable Mini Projector</h3><p>Great for tech lovers, movie buffs, and families. Turn any blank wall or outdoor sheet into a home theater setup — supports HD streaming, built-in audio, and seamless device connectivity.</p><div class="pick-foot"><span class="price">~$59</span><a class="shop" href="https://www.amazon.com/dp/B0CHP7T569?tag=thedealnest00-20">Shop it</a></div></div><div class="pick"><h3>Owala FreeSip Insulated Bottle</h3><p>Great for students, fitness fans, and daily commuters. Leak-proof, spill-resistant, and one of the most requested viral gifts of the season.</p><div class="pick-foot"><span class="price">~$24</span><a class="shop" href="https://www.amazon.com/dp/B0C59BYVTQ?tag=thedealnest00-20">Shop it</a></div></div><div class="pick"><h3>Galaxy Star Projector Night Light</h3><p>Great for kids, teens, and bedroom-aesthetic lovers. Custom color modes and rotation effects make it an evergreen favorite for bedtimes or ambient evening lighting.</p><div class="pick-foot"><span class="price">~$33</span><a class="shop" href="https://www.amazon.com/dp/B09FL6YR9L?tag=thedealnest00-20">Shop it</a></div></div><div class="pick"><h3>Lightweight Casual Cardigan Cover-Up</h3><p>Great for teachers, hostesses, and Secret Santa exchanges. Soft, versatile, and easy to layer — a safe, thoughtful gift when you need something under $20.</p><div class="pick-foot"><span class="price">~$18</span><a class="shop" href="https://www.amazon.com/dp/B0H1FBXLXN?tag=thedealnest00-20">Shop it</a></div></div><p>Vol. 2 of this series sorts picks by recipient instead of price — that one goes up Nov 9 if you'd rather shop by who you're buying for.</p>
+<div class="pick"><div class="pick-thumb"><img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T2/images/I/618GyHpsQVL._AC_SX466_.jpg" alt="Portable Mini Projector" loading="lazy"><span class="wm">The Deal Nest</span></div><h3>Portable Mini Projector</h3><p>Great for tech lovers, movie buffs, and families. Turn any blank wall or outdoor sheet into a home theater setup — supports HD streaming, built-in audio, and seamless device connectivity.</p><div class="pick-foot"><span class="price">~$40</span><a class="shop" href="https://www.amazon.com/dp/B0DSPJSCTP?tag=thedealnest00-20">Shop it</a></div></div><div class="pick"><div class="pick-thumb"><img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T2/images/I/51AaW6rpIFL._AC_SY300_SX300_QL70_FMwebp_.jpg" alt="Owala FreeSip Insulated Bottle" loading="lazy"><span class="wm">The Deal Nest</span></div><h3>Owala FreeSip Insulated Bottle</h3><p>Great for students, fitness fans, and daily commuters. Leak-proof, spill-resistant, and one of the most requested viral gifts of the season.</p><div class="pick-foot"><span class="price">~$24</span><a class="shop" href="https://www.amazon.com/dp/B0C59BYVTQ?tag=thedealnest00-20">Shop it</a></div></div><div class="pick"><div class="pick-thumb"><img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T2/images/I/61f9wySJCmL._AC_SY300_SX300_QL70_FMwebp_.jpg" alt="Galaxy Star Projector Night Light" loading="lazy"><span class="wm">The Deal Nest</span></div><h3>Galaxy Star Projector Night Light</h3><p>Great for kids, teens, and bedroom-aesthetic lovers. Custom color modes and rotation effects make it an evergreen favorite for bedtimes or ambient evening lighting.</p><div class="pick-foot"><span class="price">~$33</span><a class="shop" href="https://www.amazon.com/dp/B09FL6YR9L?tag=thedealnest00-20">Shop it</a></div></div><div class="pick"><div class="pick-thumb"><img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T2/images/I/61iHWxVOOzL._AC_SX679_.jpg" alt="Lightweight Casual Cardigan Cover-Up" loading="lazy"><span class="wm">The Deal Nest</span></div><h3>Lightweight Casual Cardigan Cover-Up</h3><p>Great for teachers, hostesses, and Secret Santa exchanges. Soft, versatile, and easy to layer — a safe, thoughtful gift when you need something under $20.</p><div class="pick-foot"><span class="price">~$18</span><a class="shop" href="https://www.amazon.com/dp/B0H1FBXLXN?tag=thedealnest00-20">Shop it</a></div></div><p>Vol. 2 of this series sorts picks by recipient instead of price — that one goes up Nov 9 if you'd rather shop by who you're buying for.</p>
 <div class="tags"><span class="tag">gift guide</span><span class="tag">ltk</span><span class="tag">under-60</span></div>
 <div class="legal-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="affiliate-disclosure.html">Affiliate Disclosure</a><a href="privacy-policy.html">Privacy Policy</a></div>
 </div>

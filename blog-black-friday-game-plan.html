@@ -60,6 +60,27 @@ p{color:var(--ink-soft); margin:0 0 16px;}
 table{width:100%; border-collapse:collapse; margin:0 0 20px; font-size:0.88rem;}
 th,td{text-align:left; padding:8px 10px; border-bottom:1px solid var(--line);}
 th{font-family:'IBM Plex Mono',monospace; font-size:0.72rem; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-soft);}
+
+.product-thumb img, .pick-swatch img{
+position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center;
+}
+.product-thumb .wm, .pick-swatch .wm{
+position:absolute; right:8px; bottom:7px; z-index:2;
+font-family:'IBM Plex Mono',monospace; font-size:0.6rem; font-weight:500; letter-spacing:0.03em;
+color:#fff; background:rgba(20,15,10,0.55); backdrop-filter:blur(2px);
+padding:3px 7px; border-radius:5px; pointer-events:none; white-space:nowrap;
+}
+.pick-swatch .wm{ font-size:0.65rem; right:12px; bottom:10px; }
+.product-thumb::before, .pick-swatch::before{
+content:""; position:absolute; inset:0;
+background:linear-gradient(180deg, transparent 55%, rgba(0,0,0,0.35) 100%);
+z-index:1; pointer-events:none;
+}
+
+.pick-thumb{ position:relative; width:100%; aspect-ratio:4/3; border-radius:8px; overflow:hidden; margin-bottom:12px; background:var(--surface-2,#f1eade); }
+.pick-thumb img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.pick-thumb::before{ content:""; position:absolute; inset:0; background:linear-gradient(180deg, transparent 55%, rgba(0,0,0,0.35) 100%); }
+.pick-thumb .wm{ position:absolute; right:8px; bottom:7px; z-index:2; font-family:'IBM Plex Mono',monospace; font-size:0.6rem; font-weight:500; letter-spacing:0.03em; color:#fff; background:rgba(20,15,10,0.55); padding:3px 7px; border-radius:5px; white-space:nowrap; }
 </style>
 
 </head>
@@ -74,7 +95,7 @@ th{font-family:'IBM Plex Mono',monospace; font-size:0.72rem; text-transform:uppe
 <p>Black Friday offers real savings, but not every “sale” tag represents a genuine deal. Having a strategy before sales launch is the difference between actual value and clever marketing. Here's our breakdown of what's worth your watch list this year, and what you can safely skip.</p>
 <h2>What to put on your watch list</h2>
 <p><strong>Robot vacuums.</strong> Major floorcare brands traditionally drop to their lowest prices of the year during Black Friday week — look at high-suction models like the eufy super-thin series.</p>
-<div class="pick"><h3>eufy Super-Thin Robot Vacuum</h3><p>High-suction, low-profile design that fits under furniture other vacuums can't reach.</p><div class="pick-foot"><span class="price">~$200</span><a class="shop" href="https://www.amazon.com/dp/B07D75MVX9?tag=thedealnest00-20">Shop it</a></div></div><p><strong>Air fryers and small appliances.</strong> Kitchen appliances are high-volume doorbusters — look for models with multi-function presets.</p><div class="pick"><h3>COSORI Air Fryer Combo</h3><p>Multi-function presets and a dishwasher-safe basket make this a reliable kitchen upgrade pick.</p><div class="pick-foot"><span class="price">Check current price</span><a class="shop" href="https://www.amazon.com/dp/B0BD4BYR11?tag=thedealnest00-20">Shop it</a></div></div><p><strong>Cozy electric bedding.</strong> Heated throws and electric blankets consistently hit seasonal lows right before winter sets in.</p><div class="pick"><h3>Plush Heated Blanket Throw</h3><p>A perennial Black Friday/Cyber Monday top seller in the cozy-gift category.</p><div class="pick-foot"><span class="price">was $50</span><a class="shop" href="https://www.amazon.com/dp/B0BZR6YBHK?tag=thedealnest00-20">Shop it</a></div></div><h2>What to skip</h2>
+<div class="pick"><div class="pick-thumb"><img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T2/images/I/7162dbcZW3L._AC_SX300_SY300_QL70_FMwebp_.jpg" alt="eufy Super-Thin Robot Vacuum" loading="lazy"><span class="wm">The Deal Nest</span></div><h3>eufy Super-Thin Robot Vacuum</h3><p>High-suction, low-profile design that fits under furniture other vacuums can't reach.</p><div class="pick-foot"><span class="price">~$200</span><a class="shop" href="https://www.amazon.com/dp/B07R295MLS?tag=thedealnest00-20">Shop it</a></div></div><p><strong>Air fryers and small appliances.</strong> Kitchen appliances are high-volume doorbusters — look for models with multi-function presets.</p><div class="pick"><div class="pick-thumb"><img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T2/images/I/81xlEWE3e+L._AC_SY300_SX300_QL70_FMwebp_.jpg" alt="COSORI Air Fryer Combo" loading="lazy"><span class="wm">The Deal Nest</span></div><h3>COSORI Air Fryer Combo</h3><p>Multi-function presets and a dishwasher-safe basket make this a reliable kitchen upgrade pick.</p><div class="pick-foot"><span class="price">Check current price</span><a class="shop" href="https://www.amazon.com/dp/B0BD4BYR11?tag=thedealnest00-20">Shop it</a></div></div><p><strong>Cozy electric bedding.</strong> Heated throws and electric blankets consistently hit seasonal lows right before winter sets in.</p><div class="pick"><div class="pick-thumb"><img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T2/images/I/81inzXJG5oL._AC_SY300_SX300_QL70_FMwebp_.jpg" alt="Plush Heated Blanket Throw" loading="lazy"><span class="wm">The Deal Nest</span></div><h3>Plush Heated Blanket Throw</h3><p>A perennial Black Friday/Cyber Monday top seller in the cozy-gift category.</p><div class="pick-foot"><span class="price">was $50</span><a class="shop" href="https://www.amazon.com/dp/B0BZR6YBHK?tag=thedealnest00-20">Shop it</a></div></div><h2>What to skip</h2>
 <p><strong>Unbranded “off-name” tech bundles.</strong> Doorbuster tech from unknown brands built specifically for sale events tends to sacrifice build quality.</p>
 <p><strong>Gift cards.</strong> Major retailers rarely discount gift cards, and affiliate programs like Amazon Associates exclude gift cards from earning any commission — a plain fact worth knowing whether or not you're the one buying. Stick to physical gift bundles or practical accessories instead.</p>
 <div class="tags"><span class="tag">deals</span><span class="tag">tiktok shop</span><span class="tag">watch-vs-skip</span></div>

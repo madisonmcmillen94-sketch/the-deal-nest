@@ -60,6 +60,27 @@ p{color:var(--ink-soft); margin:0 0 16px;}
 table{width:100%; border-collapse:collapse; margin:0 0 20px; font-size:0.88rem;}
 th,td{text-align:left; padding:8px 10px; border-bottom:1px solid var(--line);}
 th{font-family:'IBM Plex Mono',monospace; font-size:0.72rem; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-soft);}
+
+.product-thumb img, .pick-swatch img{
+position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center;
+}
+.product-thumb .wm, .pick-swatch .wm{
+position:absolute; right:8px; bottom:7px; z-index:2;
+font-family:'IBM Plex Mono',monospace; font-size:0.6rem; font-weight:500; letter-spacing:0.03em;
+color:#fff; background:rgba(20,15,10,0.55); backdrop-filter:blur(2px);
+padding:3px 7px; border-radius:5px; pointer-events:none; white-space:nowrap;
+}
+.pick-swatch .wm{ font-size:0.65rem; right:12px; bottom:10px; }
+.product-thumb::before, .pick-swatch::before{
+content:""; position:absolute; inset:0;
+background:linear-gradient(180deg, transparent 55%, rgba(0,0,0,0.35) 100%);
+z-index:1; pointer-events:none;
+}
+
+.pick-thumb{ position:relative; width:100%; aspect-ratio:4/3; border-radius:8px; overflow:hidden; margin-bottom:12px; background:var(--surface-2,#f1eade); }
+.pick-thumb img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.pick-thumb::before{ content:""; position:absolute; inset:0; background:linear-gradient(180deg, transparent 55%, rgba(0,0,0,0.35) 100%); }
+.pick-thumb .wm{ position:absolute; right:8px; bottom:7px; z-index:2; font-family:'IBM Plex Mono',monospace; font-size:0.6rem; font-weight:500; letter-spacing:0.03em; color:#fff; background:rgba(20,15,10,0.55); padding:3px 7px; border-radius:5px; white-space:nowrap; }
 </style>
 
 </head>
@@ -80,7 +101,7 @@ th{font-family:'IBM Plex Mono',monospace; font-size:0.72rem; text-transform:uppe
 <tr><td>Priority / expedited air</td><td>Dec 21 &ndash; Dec 22</td><td>Dec 21</td></tr>
 </table>
 <h2>Top safe-ship gift recommendations</h2>
-<div class="pick"><h3>Personalized Photo Ornament</h3><p>Ships fast in custom packaging for a personal touch.</p><div class="pick-foot"><span class="price">~$22</span><a class="shop" href="https://www.amazon.com/dp/B08L6S37G7?tag=thedealnest00-20">Shop it</a></div></div><div class="pick"><h3>Plush Prime-Eligible Robe</h3><p>Fast Prime shipping is typically available on this one through late December.</p><div class="pick-foot"><span class="price">~$42</span><a class="shop" href="https://www.amazon.com/dp/B07XVRBC3B?tag=thedealnest00-20">Shop it</a></div></div><p>Once you have this year's real cutoffs, update the table above and republish — no other changes needed.</p>
+<div class="pick"><div class="pick-thumb"><img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T2/images/I/918wpByr0eL._AC_SY300_SX300_QL70_FMwebp_.jpg" alt="Personalized Photo Ornament" loading="lazy"><span class="wm">The Deal Nest</span></div><h3>Personalized Photo Ornament</h3><p>Ships fast in custom packaging for a personal touch.</p><div class="pick-foot"><span class="price">~$22</span><a class="shop" href="https://www.amazon.com/dp/B08L6S37G7?tag=thedealnest00-20">Shop it</a></div></div><div class="pick"><div class="pick-thumb"><img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T2/images/I/61UB6r-PJAL._AC_SY879_.jpg" alt="Plush Prime-Eligible Robe" loading="lazy"><span class="wm">The Deal Nest</span></div><h3>Plush Prime-Eligible Robe</h3><p>Fast Prime shipping is typically available on this one through late December.</p><div class="pick-foot"><span class="price">~$42</span><a class="shop" href="https://www.amazon.com/dp/B07XVRBC3B?tag=thedealnest00-20">Shop it</a></div></div><p>Once you have this year's real cutoffs, update the table above and republish — no other changes needed.</p>
 <div class="tags"><span class="tag">shipping</span><span class="tag">reference</span><span class="tag">holiday</span></div>
 <div class="legal-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="affiliate-disclosure.html">Affiliate Disclosure</a><a href="privacy-policy.html">Privacy Policy</a></div>
 </div>

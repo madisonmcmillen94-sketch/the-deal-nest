@@ -273,12 +273,34 @@ padding:38px 0 30px;
 .foot-brand{ font-family:'Fraunces', serif; font-weight:600; font-size:1.1rem; }
 .foot-social{ display:flex; gap:14px; }
 .foot-social a{ font-size:0.85rem; font-weight:600; color:var(--berry); text-decoration:none; }
+.foot-social-pending{ font-size:0.85rem; font-weight:600; color:var(--ink-soft); opacity:0.55; cursor:default; }
 .disclosure{
 margin-top:26px; padding-top:20px; border-top:1px solid var(--line);
 font-size:0.78rem; color:var(--ink-soft); line-height:1.6; max-width:70ch;
 }
 
 [hidden]{ display:none !important; }
+
+.product-thumb img, .pick-swatch img{
+position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center;
+}
+.product-thumb .wm, .pick-swatch .wm{
+position:absolute; right:8px; bottom:7px; z-index:2;
+font-family:'IBM Plex Mono',monospace; font-size:0.6rem; font-weight:500; letter-spacing:0.03em;
+color:#fff; background:rgba(20,15,10,0.55); backdrop-filter:blur(2px);
+padding:3px 7px; border-radius:5px; pointer-events:none; white-space:nowrap;
+}
+.pick-swatch .wm{ font-size:0.65rem; right:12px; bottom:10px; }
+.product-thumb::before, .pick-swatch::before{
+content:""; position:absolute; inset:0;
+background:linear-gradient(180deg, transparent 55%, rgba(0,0,0,0.35) 100%);
+z-index:1; pointer-events:none;
+}
+
+.pick-thumb{ position:relative; width:100%; aspect-ratio:4/3; border-radius:8px; overflow:hidden; margin-bottom:12px; background:var(--surface-2,#f1eade); }
+.pick-thumb img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.pick-thumb::before{ content:""; position:absolute; inset:0; background:linear-gradient(180deg, transparent 55%, rgba(0,0,0,0.35) 100%); }
+.pick-thumb .wm{ position:absolute; right:8px; bottom:7px; z-index:2; font-family:'IBM Plex Mono',monospace; font-size:0.6rem; font-weight:500; letter-spacing:0.03em; color:#fff; background:rgba(20,15,10,0.55); padding:3px 7px; border-radius:5px; white-space:nowrap; }
 </style>
 <script type="application/ld+json">
 {
@@ -320,7 +342,7 @@ font-size:0.78rem; color:var(--ink-soft); line-height:1.6; max-width:70ch;
 </div>
 <div class="pick-card">
 <span class="pick-label">This week's pick</span>
-<div class="pick-swatch"></div>
+<div class="pick-swatch"><img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T2/images/I/71iSPIaDoSL._AC_SY300_SX300_QL70_FMwebp_.jpg" alt="Wax Melting Lamp — Flameless Candle Warmer" loading="lazy"><span class="wm">The Deal Nest</span></div>
 <h3>Wax Melting Lamp — Flameless Candle Warmer</h3>
 <div class="pick-meta">Home &amp; Self-Care · trending on TikTok home-aesthetic right now</div>
 <div class="pick-row">
@@ -377,7 +399,7 @@ font-size:0.78rem; color:var(--ink-soft); line-height:1.6; max-width:70ch;
 <div class="product-grid" id="product-grid">
 <!-- HOME -->
 <div class="product-card" data-cat="home">
-<div class="product-thumb home"></div>
+<div class="product-thumb home"><img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T2/images/I/71iSPIaDoSL._AC_SY300_SX300_QL70_FMwebp_.jpg" alt="Wax Melting Lamp (Flameless Candle Warmer)" loading="lazy"><span class="wm">The Deal Nest</span></div>
 <div class="product-tag-row"><span class="badge trend">TikTok trend</span><span class="badge live">Amazon</span></div>
 <h4>Wax Melting Lamp (Flameless Candle Warmer)</h4>
 <p class="product-meta">Home &amp; Self-Care</p>
@@ -385,7 +407,7 @@ font-size:0.78rem; color:var(--ink-soft); line-height:1.6; max-width:70ch;
 <div class="product-foot"><span class="product-price mono">~$34</span><a class="shop-link" href="https://www.amazon.com/Flameless-Dimmable-Adjustable-Electric-Christmas/dp/B0D6GHLYRL?tag=thedealnest00-20">Shop it</a></div>
 </div>
 <div class="product-card" data-cat="home">
-<div class="product-thumb home"></div>
+<div class="product-thumb home"><img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T2/images/I/71hlUtXKFPL._AC_SX342_SY445_QL70_FMwebp_.jpg" alt="Mushroom Table Lamp with Built-In Dimmer" loading="lazy"><span class="wm">The Deal Nest</span></div>
 <div class="product-tag-row"><span class="badge trend">TikTok trend</span><span class="badge live">Amazon</span></div>
 <h4>Mushroom Table Lamp with Built-In Dimmer</h4>
 <p class="product-meta">Home &amp; Self-Care</p>
@@ -393,7 +415,7 @@ font-size:0.78rem; color:var(--ink-soft); line-height:1.6; max-width:70ch;
 <div class="product-foot"><span class="product-price mono">~$40</span><a class="shop-link" href="https://www.amazon.com/Decorate-Dimmable-Mushroom-Livingroom-Flowerpot/dp/B0DHKXF762?tag=thedealnest00-20">Shop it</a></div>
 </div>
 <div class="product-card" data-cat="home">
-<div class="product-thumb home"></div>
+<div class="product-thumb home"><img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T2/images/I/71i9CgTPU0L._AC_SY300_SX300_QL70_FMwebp_.jpg" alt="Neck &amp; Shoulder Massager, Heat + Pulse" loading="lazy"><span class="wm">The Deal Nest</span></div>
 <div class="product-tag-row"><span class="badge trend">TikTok trend</span><span class="badge live">Amazon</span></div>
 <h4>Neck &amp; Shoulder Massager, Heat + Pulse</h4>
 <p class="product-meta">Home &amp; Self-Care</p>
@@ -401,7 +423,7 @@ font-size:0.78rem; color:var(--ink-soft); line-height:1.6; max-width:70ch;
 <div class="product-foot"><span class="product-price mono">~$45</span><a class="shop-link" href="https://www.amazon.com/Nekteck-Back-Neck-Shoulder-Massager/dp/B01BZOKLOO?tag=thedealnest00-20">Shop it</a></div>
 </div>
 <div class="product-card" data-cat="home">
-<div class="product-thumb home"></div>
+<div class="product-thumb home"><img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T2/images/I/61pdOEI-mKL._AC_SY300_SX300_QL70_FMwebp_.jpg" alt="Volcano Flame Aromatherapy Diffuser" loading="lazy"><span class="wm">The Deal Nest</span></div>
 <div class="product-tag-row"><span class="badge trend">TikTok trend</span><span class="badge live">Amazon</span></div>
 <h4>Volcano Flame Aromatherapy Diffuser</h4>
 <p class="product-meta">Home &amp; Self-Care</p>
@@ -409,7 +431,7 @@ font-size:0.78rem; color:var(--ink-soft); line-height:1.6; max-width:70ch;
 <div class="product-foot"><span class="product-price mono">~$26</span><a class="shop-link" href="https://www.amazon.com/dp/B0C4FTJ1CN?tag=thedealnest00-20">Shop it</a></div>
 </div>
 <div class="product-card" data-cat="home">
-<div class="product-thumb home"></div>
+<div class="product-thumb home"><img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T2/images/I/619kPtJskWL._AC_SX342_SY445_QL70_FMwebp_.jpg" alt="Flameless LED Pillar Candles with Remote" loading="lazy"><span class="wm">The Deal Nest</span></div>
 <div class="product-tag-row"><span class="badge trend">Seasonal</span><span class="badge live">Amazon</span></div>
 <h4>Flameless LED Pillar Candles with Remote</h4>
 <p class="product-meta">Home &amp; Self-Care · Budget Halloween Under $20</p>
@@ -419,7 +441,7 @@ font-size:0.78rem; color:var(--ink-soft); line-height:1.6; max-width:70ch;
 
 <!-- GIFTS -->
 <div class="product-card" data-cat="gifts">
-<div class="product-thumb gifts"></div>
+<div class="product-thumb gifts"><img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T2/images/I/51AaW6rpIFL._AC_SY300_SX300_QL70_FMwebp_.jpg" alt="Gift Guide Vol. 1 Pick: Status Water Bottle" loading="lazy"><span class="wm">The Deal Nest</span></div>
 <div class="product-tag-row"><span class="badge trend">TikTok trend</span><span class="badge live">Amazon</span></div>
 <h4>Gift Guide Vol. 1 Pick: Status Water Bottle</h4>
 <p class="product-meta">Under $25</p>
@@ -427,15 +449,15 @@ font-size:0.78rem; color:var(--ink-soft); line-height:1.6; max-width:70ch;
 <div class="product-foot"><span class="product-price mono">~$24</span><a class="shop-link" href="https://www.amazon.com/Owala-FreeSip-Insulated-Stainless-BPA-Free/dp/B0C59BYVTQ?tag=thedealnest00-20">Shop it</a></div>
 </div>
 <div class="product-card" data-cat="gifts">
-<div class="product-thumb gifts"></div>
+<div class="product-thumb gifts"><img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T2/images/I/618GyHpsQVL._AC_SX466_.jpg" alt="Gift Guide Vol. 2: For Him — Portable Mini Projector" loading="lazy"><span class="wm">The Deal Nest</span></div>
 <div class="product-tag-row"><span class="badge trend">TikTok trend</span><span class="badge live">Amazon</span></div>
 <h4>Gift Guide Vol. 2: For Him — Portable Mini Projector</h4>
 <p class="product-meta">For Him</p>
 <p class="product-source">Sourced: TikTok Shop smart/lifestyle gadgets</p>
-<div class="product-foot"><span class="product-price mono">~$59</span><a class="shop-link" href="https://www.amazon.com/Mini-Projector-Battery-Powered-Bluetooth/dp/B0CHP7T569?tag=thedealnest00-20">Shop it</a></div>
+<div class="product-foot"><span class="product-price mono">~$40</span><a class="shop-link" href="https://www.amazon.com/dp/B0DSPJSCTP?tag=thedealnest00-20">Shop it</a></div>
 </div>
 <div class="product-card" data-cat="gifts">
-<div class="product-thumb gifts"></div>
+<div class="product-thumb gifts"><img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T2/images/I/61iHWxVOOzL._AC_SX679_.jpg" alt="Teacher &amp; Hostess Gift: Loose Cardigan Cover-Up" loading="lazy"><span class="wm">The Deal Nest</span></div>
 <div class="product-tag-row"><span class="badge trend">TikTok trend</span><span class="badge live">Amazon</span></div>
 <h4>Teacher &amp; Hostess Gift: Loose Cardigan Cover-Up</h4>
 <p class="product-meta">Gifting</p>
@@ -443,7 +465,7 @@ font-size:0.78rem; color:var(--ink-soft); line-height:1.6; max-width:70ch;
 <div class="product-foot"><span class="product-price mono">~$18</span><a class="shop-link" href="https://www.amazon.com/Coverup-Lightweight-Cardigan-Casual-Cardigans/dp/B0H1FBXLXN?tag=thedealnest00-20">Shop it</a></div>
 </div>
 <div class="product-card" data-cat="gifts">
-<div class="product-thumb gifts"></div>
+<div class="product-thumb gifts"><img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T2/images/I/61f9wySJCmL._AC_SY300_SX300_QL70_FMwebp_.jpg" alt="Gift Guide Vol. 3: Galaxy Star Projector Night Light" loading="lazy"><span class="wm">The Deal Nest</span></div>
 <div class="product-tag-row"><span class="badge trend">TikTok trend</span><span class="badge live">Amazon</span></div>
 <h4>Gift Guide Vol. 3: Galaxy Star Projector Night Light</h4>
 <p class="product-meta">Gifting · Under $40</p>
@@ -451,7 +473,7 @@ font-size:0.78rem; color:var(--ink-soft); line-height:1.6; max-width:70ch;
 <div class="product-foot"><span class="product-price mono">~$33</span><a class="shop-link" href="https://www.amazon.com/dp/B09FL6YR9L?tag=thedealnest00-20">Shop it</a></div>
 </div>
 <div class="product-card" data-cat="gifts">
-<div class="product-thumb gifts"></div>
+<div class="product-thumb gifts"><img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T2/images/I/51UInBVEPUL._AC_SY300_SX300_QL70_FMwebp_.jpg" alt="Pumpkin-Shaped Ceramic Mug" loading="lazy"><span class="wm">The Deal Nest</span></div>
 <div class="product-tag-row"><span class="badge trend">Seasonal</span><span class="badge live">Amazon</span></div>
 <h4>Pumpkin-Shaped Ceramic Mug</h4>
 <p class="product-meta">Hostess Gift · Budget Halloween Under $20</p>
@@ -461,15 +483,15 @@ font-size:0.78rem; color:var(--ink-soft); line-height:1.6; max-width:70ch;
 
 <!-- DEALS -->
 <div class="product-card" data-cat="deals">
-<div class="product-thumb deals"></div>
+<div class="product-thumb deals"><img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T2/images/I/7162dbcZW3L._AC_SX300_SY300_QL70_FMwebp_.jpg" alt="Black Friday Watch List: Robot Vacuum" loading="lazy"><span class="wm">The Deal Nest</span></div>
 <div class="product-tag-row"><span class="badge trend">Seasonal</span><span class="badge live">Amazon</span></div>
 <h4>Black Friday Watch List: Robot Vacuum</h4>
 <p class="product-meta">Deal-tracked</p>
 <p class="product-source">Perennial BF/CM top seller</p>
-<div class="product-foot"><span class="product-price mono">was $299</span><a class="shop-link" href="https://www.amazon.com/eufy-Upgraded-Super-Thin-Self-Charging-Medium-Pile/dp/B07D75MVX9?tag=thedealnest00-20">Shop it</a></div>
+<div class="product-foot"><span class="product-price mono">was $299</span><a class="shop-link" href="https://www.amazon.com/dp/B07R295MLS?tag=thedealnest00-20">Shop it</a></div>
 </div>
 <div class="product-card" data-cat="deals">
-<div class="product-thumb deals"></div>
+<div class="product-thumb deals"><img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T2/images/I/81xlEWE3e+L._AC_SY300_SX300_QL70_FMwebp_.jpg" alt="Cyber Monday Watch List: Air Fryer" loading="lazy"><span class="wm">The Deal Nest</span></div>
 <div class="product-tag-row"><span class="badge trend">Seasonal</span><span class="badge live">Amazon</span></div>
 <h4>Cyber Monday Watch List: Air Fryer</h4>
 <p class="product-meta">Deal-tracked</p>
@@ -477,7 +499,7 @@ font-size:0.78rem; color:var(--ink-soft); line-height:1.6; max-width:70ch;
 <div class="product-foot"><span class="product-price mono">was $129</span><a class="shop-link" href="https://www.amazon.com/COSORI-Performance-Functions-Dishwasher-Safe-Detachable/dp/B0BD4BYR11?tag=thedealnest00-20">Shop it</a></div>
 </div>
 <div class="product-card" data-cat="deals">
-<div class="product-thumb deals"></div>
+<div class="product-thumb deals"><img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T2/images/I/71PdrG7DMlL._AC_SY300_SX300_QL70_FMwebp_.jpg" alt="Green Monday Pick: Privacy Screen Protector 3-Pack" loading="lazy"><span class="wm">The Deal Nest</span></div>
 <div class="product-tag-row"><span class="badge trend">TikTok trend</span><span class="badge live">Amazon</span></div>
 <h4>Green Monday Pick: Privacy Screen Protector 3-Pack</h4>
 <p class="product-meta">Deal-tracked</p>
@@ -485,7 +507,7 @@ font-size:0.78rem; color:var(--ink-soft); line-height:1.6; max-width:70ch;
 <div class="product-foot"><span class="product-price mono">was $34</span><a class="shop-link" href="https://www.amazon.com/Ailun-Protector-iPhone-15-Anti-Scratch/dp/B0CCYM3S2L?tag=thedealnest00-20">Shop it</a></div>
 </div>
 <div class="product-card" data-cat="deals">
-<div class="product-thumb deals"></div>
+<div class="product-thumb deals"><img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T2/images/I/81inzXJG5oL._AC_SY300_SX300_QL70_FMwebp_.jpg" alt="Black Friday Watch List: Heated Blanket Throw" loading="lazy"><span class="wm">The Deal Nest</span></div>
 <div class="product-tag-row"><span class="badge trend">Seasonal</span><span class="badge live">Amazon</span></div>
 <h4>Black Friday Watch List: Heated Blanket Throw</h4>
 <p class="product-meta">Deal-tracked</p>
@@ -495,7 +517,7 @@ font-size:0.78rem; color:var(--ink-soft); line-height:1.6; max-width:70ch;
 
 <!-- SHIP -->
 <div class="product-card" data-cat="ship">
-<div class="product-thumb ship"></div>
+<div class="product-thumb ship"><img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T2/images/I/918wpByr0eL._AC_SY300_SX300_QL70_FMwebp_.jpg" alt="Free Shipping Day: Personalized Ornament" loading="lazy"><span class="wm">The Deal Nest</span></div>
 <div class="product-tag-row"><span class="badge live">Fast-ship</span><span class="badge live">Amazon</span></div>
 <h4>Free Shipping Day: Personalized Ornament</h4>
 <p class="product-meta">Ships in 2 days</p>
@@ -511,7 +533,7 @@ font-size:0.78rem; color:var(--ink-soft); line-height:1.6; max-width:70ch;
 <div class="product-foot"><span class="product-price mono">~$12</span><a class="shop-link" href="https://www.amazon.com/s?k=cordless+milk+frother&tag=thedealnest00-20">Shop it</a></div>
 </div>
 <div class="product-card" data-cat="ship">
-<div class="product-thumb ship"></div>
+<div class="product-thumb ship"><img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T2/images/I/61UB6r-PJAL._AC_SY879_.jpg" alt="Prime-Eligible Cozy Robe" loading="lazy"><span class="wm">The Deal Nest</span></div>
 <div class="product-tag-row"><span class="badge live">Fast-ship</span><span class="badge live">Amazon</span></div>
 <h4>Prime-Eligible Cozy Robe</h4>
 <p class="product-meta">Order by Dec 20</p>
@@ -634,9 +656,9 @@ font-size:0.78rem; color:var(--ink-soft); line-height:1.6; max-width:70ch;
 <p style="color:var(--ink-soft); font-size:0.85rem; margin-top:6px; max-width:40ch;">Holiday gift guides and deal tracking, built from a season of daily TikTok, Instagram, and Facebook posts.</p>
 </div>
 <div class="foot-social">
-<a href="#">TikTok</a>
-<a href="#">Instagram</a>
-<a href="#">Facebook</a>
+<span class="foot-social-pending" title="Account launching soon">TikTok</span>
+<span class="foot-social-pending" title="Account launching soon">Instagram</span>
+<span class="foot-social-pending" title="Account launching soon">Facebook</span>
 </div>
 </div>
 <p class="disclosure">Affiliate disclosure: The Deal Nest participates in the Amazon Associates program. Some links on this site are affiliate links, meaning we may earn a commission on qualifying purchases at no extra cost to you. We only feature products we'd genuinely recommend. Prices and availability shown are examples and subject to change — always check the retailer for current pricing.</p>
