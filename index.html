@@ -166,11 +166,6 @@ radial-gradient(120% 140% at 20% 15%, #cf8a94 0%, transparent 45%),
 linear-gradient(155deg, var(--berry) 0%, #6f2436 100%);
 position:relative; overflow:hidden;
 }
-.pick-swatch::after{
-content:"wax lamp"; position:absolute; right:12px; bottom:10px;
-font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:rgba(255,255,255,0.75);
-letter-spacing:0.04em;
-}
 .pick-card h3{ font-size:1.1rem; font-weight:600; }
 .pick-card .pick-meta{ font-size:0.85rem; color:var(--ink-soft); margin-top:4px; }
 .pick-row{ display:flex; align-items:center; justify-content:space-between; margin-top:16px; }
@@ -237,6 +232,18 @@ text-transform:uppercase; padding:3px 7px; border-radius:5px; white-space:nowrap
 .product-price{ font-family:'IBM Plex Mono', monospace; font-weight:500; }
 .shop-link{ font-size:0.8rem; font-weight:600; color:var(--berry); text-decoration:none; }
 .shop-link::after{ content:" →"; }
+
+.color-links{ display:flex; flex-wrap:wrap; align-items:baseline; gap:4px 8px; margin:-2px 0 0; }
+.color-links .color-label{
+font-family:'IBM Plex Mono', monospace; font-size:0.6rem; letter-spacing:0.05em;
+text-transform:uppercase; color:var(--ink-soft);
+}
+.color-links a{
+font-size:0.75rem; font-weight:600; color:var(--berry); text-decoration:none;
+border-bottom:1px solid transparent; padding-bottom:1px;
+}
+.color-links a:hover{ border-bottom-color:var(--berry); }
+.color-links a:focus-visible{ outline:2px solid var(--berry); outline-offset:2px; }
 
 /* ---------- blog ---------- */
 .blog-list{ display:flex; flex-direction:column; gap:0; border-top:1px solid var(--line); }
@@ -342,12 +349,12 @@ z-index:1; pointer-events:none;
 </div>
 <div class="pick-card">
 <span class="pick-label">This week's pick</span>
-<div class="pick-swatch"><img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T2/images/I/71iSPIaDoSL._AC_SX679_.jpg" alt="Wax Melting Lamp — Flameless Candle Warmer" loading="lazy"><span class="wm">The Deal Nest</span></div>
-<h3>Wax Melting Lamp — Flameless Candle Warmer</h3>
-<div class="pick-meta">Home &amp; Self-Care · trending on TikTok home-aesthetic right now</div>
+<div class="pick-swatch"><img src="https://m.media-amazon.com/images/I/61Hx5h-nysL._AC_SX466_.jpg" alt="Sunrise Alarm Clock with Wake-Up Light &amp; White Noise" loading="lazy"><span class="wm">The Deal Nest</span></div>
+<h3>Sunrise Alarm Clock with Wake-Up Light</h3>
+<div class="pick-meta">Home &amp; Self-Care · the darker-mornings fix everyone re-buys every fall</div>
 <div class="pick-row">
-<span class="pick-price mono">~$18</span>
-<a class="btn" href="https://www.amazon.com/Flameless-Dimmable-Adjustable-Electric-Christmas/dp/B0D6GHLYRL?tag=thedealnest00-20">Shop it</a>
+<span class="pick-price mono">~$36</span>
+<a class="btn" href="https://www.amazon.com/dp/B081CHLF46?tag=thedealnest00-20">Shop it</a>
 </div>
 </div>
 </div>
@@ -468,8 +475,9 @@ z-index:1; pointer-events:none;
 <div class="product-tag-row"><span class="badge trend">TikTok trend</span><span class="badge live">Amazon</span></div>
 <h4>Round Blue Light Blocking Glasses</h4>
 <p class="product-meta">Home &amp; Self-Care · Desk Setup</p>
-<p class="product-source">Sourced: viral desk-aesthetic accessory — metal frames, price varies by color</p>
-<div class="product-foot"><span class="product-price mono">~$16</span><a class="shop-link" href="https://www.amazon.com/dp/B09HC52GMD?tag=thedealnest00-20">Shop it</a></div>
+<p class="product-source">Sourced: viral desk-aesthetic accessory — metal round frames, four colorways</p>
+<div class="color-links"><span class="color-label">Color:</span><a href="https://www.amazon.com/dp/B09HC52GMD?tag=thedealnest00-20">Black</a><a href="https://www.amazon.com/dp/B07GWNWXTB?tag=thedealnest00-20">Gold</a><a href="https://www.amazon.com/dp/B07L849GP5?tag=thedealnest00-20">Silver</a><a href="https://www.amazon.com/dp/B07GWCJ2R4?tag=thedealnest00-20">Multicolor</a></div>
+<div class="product-foot"><span class="product-price mono">~$14–16</span><a class="shop-link" href="https://www.amazon.com/dp/B09HC52GMD?tag=thedealnest00-20">Shop it</a></div>
 </div>
 
 <!-- GIFTS -->
